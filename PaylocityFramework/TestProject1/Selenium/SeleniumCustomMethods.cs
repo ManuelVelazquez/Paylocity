@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SeleniumExtras.WaitHelpers;
 using OpenQA.Selenium.Support.UI;
+using NUnit.Framework.Legacy;
 
 namespace TestProject1.Selenium
 {
@@ -37,6 +38,8 @@ namespace TestProject1.Selenium
         {
             return locator.Displayed;
         }
+
+
 
     }
 }

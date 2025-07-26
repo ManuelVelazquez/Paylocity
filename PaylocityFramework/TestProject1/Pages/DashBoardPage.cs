@@ -30,8 +30,9 @@ namespace TestProject1.Pages
         IWebElement lnkUpdateEmployee => driver.FindElement(By.XPath("//table[@id= 'employeesTable']/tbody/tr/td[9]/i[1]"), 5);
         IWebElement btnUpdateEmployee => driver.FindElement(By.Id("updateEmployee"), 5);
         IWebElement btnCancelAddEmployeeForm => driver.FindElement(By.XPath("//button[text()='Cancel']"), 5);
-
         IWebElement btnCancelDeleteEmployeeForm => driver.FindElement(By.XPath("//div[@id='deleteModal']//button[text()='Cancel']"), 5);
+
+        IWebElement lblLastName => driver.FindElement(By.XPath("//table[@id= 'employeesTable']/tbody/tr/td[2]"), 5);
 
 
 
@@ -129,6 +130,12 @@ namespace TestProject1.Pages
         public bool isUpdateEmployeeFormDisplayed()
         {
             return btnUpdateEmployee.Displayed;
+        }
+
+        public void logOut()
+        {
+            btnLogOut.Click();
+
         }
 
     }
